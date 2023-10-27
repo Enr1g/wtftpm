@@ -1,0 +1,31 @@
+[package]
+name = "wtftpm"
+version = "0.2.0"
+edition = "2021"
+build = "build.rs"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[[bin]]
+name = "wtftpm"
+
+[build-dependencies]
+bindgen = "0.68.1"
+prettyplease = "0.2.15"
+quote = "1.0.33"
+syn = { version = "2.0.38", features = ["full", "extra-traits", "printing"] }
+
+[dependencies]
+clap = { version = "4.4.6", features = ["derive"] }
+clap_complete = "4.4.3"
+dirs = "5.0.1"
+glib = "0.18.2"
+libloading = "0.8.1"
+libsecret = "0.4.0"
+log = "0.4.20"
+rpassword = "7.2.0"
+secstr = { version = "0.5.1", features = ["serde"] }
+serde = { version = "1.0.189", features = ["derive"] }
+serde_yaml = "0.9.25"
+simplelog = "0.12.1"
